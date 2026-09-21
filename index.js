@@ -80,6 +80,21 @@ export function sumTo(n) {
  */
 export function sumFromTo(a, z) {
   // TODO
+  let startInt = a;
+  let endInt = z;
+  let sum = 0;
+
+  if (a > z) {
+    return 0;
+  } else if (a === z) {
+    return a;
+  }
+
+  for (let i = a; i <= z; i++) {
+    sum = sum + i;
+  }
+
+  return sum;
 }
 
 /**
