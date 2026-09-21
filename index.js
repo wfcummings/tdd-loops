@@ -34,6 +34,16 @@ export function echo(word, n) {
  */
 export function echoWithSpace(word, n) {
   // TODO
+  let repeatWord = "";
+
+  while (n <= 0 || word.length === 0) {
+    return repeatWord;
+  }
+  if (n === 1) {
+    return word;
+  } else {
+    return `${word} `.repeat(n).trim();
+  }
 }
 
 /**
