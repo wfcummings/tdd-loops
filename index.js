@@ -12,6 +12,12 @@
  */
 export function echo(word, n) {
   // TODO
+  let repeatWord = "";
+
+  for (let i = 0; i < n; i++) {
+    repeatWord += word;
+  }
+  return repeatWord;
 }
 
 /**
