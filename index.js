@@ -155,6 +155,19 @@ export function sumOddsToN(n) {
  */
 export function getGrowthTime(start, target) {
   // TODO
+  //starts with certain #
+  //number doubles every 20min
+  let num1 = start;
+
+  if (start <= 0) {
+    return undefined;
+  }
+  let i = 0;
+  while (start < target) {
+    start *= 2;
+    i += 1;
+  }
+  return i * 20;
 }
 
 /**
