@@ -223,6 +223,19 @@ export function getCompoundTime(start, rate, target) {
  */
 export function moveWater(colander, bucket) {
   // TODO
+  if (colander <= 0) return undefined;
+  if (bucket <= 0) return 0;
+  if (colander >= bucket) return 1;
+  if (colander === 1) return bucket;
+
+  let current = 0;
+  let trips = 0;
+  while (current < bucket) {
+    current += colander;
+    colander = Math.max(1, colander - 1);
+    trips += 1;
+  }
+  return trips;
 }
 
 /**
