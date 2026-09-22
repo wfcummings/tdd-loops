@@ -91,7 +91,7 @@ export function sumFromTo(a, z) {
   }
 
   for (let i = a; i <= z; i++) {
-    sum = sum + i;
+    sum += i;
   }
 
   return sum;
@@ -110,6 +110,9 @@ export function sumFromTo(a, z) {
  */
 export function countdown(n) {
   // TODO
+  for (let i = n; i > 0; i--) {
+    console.log(i);
+  }
 }
 
 /**
